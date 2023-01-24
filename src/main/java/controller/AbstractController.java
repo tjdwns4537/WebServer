@@ -14,7 +14,6 @@ abstract class AbstractController implements Controller {
         if (httpRequest.isGet()) {
             return get(httpRequest);
         }
-
         if (httpRequest.isPost()) {
             return post(httpRequest);
         }

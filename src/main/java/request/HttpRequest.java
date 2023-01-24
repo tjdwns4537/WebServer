@@ -77,6 +77,7 @@ public class HttpRequest {
     }
 
     public String getSessionId() {
+        logger.debug("httpSessionId:{}",httpSession.getId());
         return httpSession.getId();
     }
 

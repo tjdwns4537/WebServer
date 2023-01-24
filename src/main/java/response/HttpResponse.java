@@ -33,6 +33,7 @@ public class HttpResponse {
         return new ResponseBuilder(StatusCode.OK);
     }
     public static ResponseBuilder found(String location) {
+        logger.debug("found location : {}",location);
         return new ResponseBuilder(StatusCode.Found).location(location);
     }
 
@@ -62,6 +63,7 @@ public class HttpResponse {
     }
 
     public String getCookie() {
+        logger.debug("httpResponseHeader : {}",responseHeader.getCookie());
         return responseHeader.getCookie();
     }
 }
